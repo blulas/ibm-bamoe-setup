@@ -17,6 +17,35 @@ If you prefer not to use containers, you can download and configure the BAMOE Ma
 <settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/SETTINGS/1.0.0" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
     <localRepository>${user.home}/.m2/repository</localRepository>
     <profiles>
+        <!-- BAMOE 9.5.1 via Docker -->
+        <profile>
+            <id>ibm-bamoe-v951-docker-maven-repository</id>
+            <repositories>
+                <repository>
+                    <id>ibm-bamoe-v951-docker-maven-repository</id>
+                    <url>http://localhost:9051</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>ibm-bamoe-v951-docker-maven-repository</id>
+                    <url>http://localhost:9051</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
         <!-- BAMOE 9.5.1 via Offline -->
         <profile>
             <id>ibm-bamoe-v951-offline-maven-repository</id>
@@ -48,6 +77,7 @@ If you prefer not to use containers, you can download and configure the BAMOE Ma
     </profiles>
 
     <activeProfiles>
+        <activeProfile>ibm-bamoe-v951-docker-maven-repository</activeProfile>
         <activeProfile>ibm-bamoe-v951-offline-maven-repository</activeProfile>
     </activeProfiles>
 </settings>
