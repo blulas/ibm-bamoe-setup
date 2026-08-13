@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-  props=../bamoe-950.properties
+  props=../bamoe-951.properties
 else
   props=$1
 fi
@@ -17,6 +17,6 @@ oc project $BAMOE_INFRASTRUCTURE_PROJECT
 
 # Installation 
 echo -e "\nInstalling PostgreSQL databaase..."
-oc apply -f ../config-maps/config-map-postgres-931.yaml
+oc apply -f ../config-maps/config-map-postgres-951.yaml
 oc apply -f ../deployments/deployment-postgres.yaml
 oc apply -f ../services/service-postgres.yaml

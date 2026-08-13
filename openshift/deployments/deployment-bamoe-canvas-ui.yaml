@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   annotations:
     deployment.kubernetes.io/revision: '2'
-    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"bamoe-canvas-ui:9.3.1-ibm-0006"},"fieldPath":"spec.template.spec.containers[?(@.name==\"bamoe-canvas-ui\")].image"}]'
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"bamoe-canvas-ui:9.5.1-ibm-0002"},"fieldPath":"spec.template.spec.containers[?(@.name==\"bamoe-canvas-ui\")].image"}]'
     openshift.io/generated-by: OpenShiftNewApp
   resourceVersion: '9380188'
   name: bamoe-canvas-ui
@@ -132,12 +132,12 @@ metadata:
           'f:replicas': {}
           'f:updatedReplicas': {}
       subresource: status
-  namespace: bamoe-v931
+  namespace: bamoe-v951
   labels:
     app: bamoe-canvas-ui
     app.kubernetes.io/component: bamoe-canvas-ui
     app.kubernetes.io/instance: bamoe-canvas-ui
-    app.kubernetes.io/part-of: bamoe-v931
+    app.kubernetes.io/part-of: bamoe-v951
     app.openshift.io/runtime: js
 spec:
   replicas: 1
@@ -160,9 +160,9 @@ spec:
               protocol: TCP
           env:
             - name: KIE_SANDBOX_CORS_PROXY_URL
-              value: 'https://bamoe-canvas-cors-proxy-bamoe-v931.apps-crc.testing'
+              value: 'https://bamoe-canvas-cors-proxy-bamoe-v951.apps-crc.testing'
             - name: KIE_SANDBOX_EXTENDED_SERVICES_URL
-              value: 'https://bamoe-canvas-extended-services-bamoe-v931.apps-crc.testing'
+              value: 'https://bamoe-canvas-extended-services-bamoe-v951.apps-crc.testing'
           resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File

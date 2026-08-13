@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   annotations:
     deployment.kubernetes.io/revision: '2'
-    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"bamoe-canvas-extended-services:9.3.1-ibm-0006"},"fieldPath":"spec.template.spec.containers[?(@.name==\"bamoe-canvas-extended-services\")].image"}]'
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"bamoe-canvas-extended-services:9.5.1-ibm-0002"},"fieldPath":"spec.template.spec.containers[?(@.name==\"bamoe-canvas-extended-services\")].image"}]'
     openshift.io/generated-by: OpenShiftNewApp
   resourceVersion: '9380172'
   name: bamoe-canvas-extended-services
@@ -122,12 +122,12 @@ metadata:
           'f:replicas': {}
           'f:updatedReplicas': {}
       subresource: status
-  namespace: bamoe-v931
+  namespace: bamoe-v951
   labels:
     app: bamoe-canvas-extended-services
     app.kubernetes.io/component: bamoe-canvas-extended-services
     app.kubernetes.io/instance: bamoe-canvas-extended-services
-    app.kubernetes.io/part-of: bamoe-v931
+    app.kubernetes.io/part-of: bamoe-v951
     app.openshift.io/runtime: golang
 spec:
   replicas: 1

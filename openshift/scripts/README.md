@@ -6,7 +6,7 @@ The collection of scripts, deployment config-maps, operators, services, and rout
 
 ```shell
     cd openshift/scripts
-    ./oc-login.sh [optional] ../bamoe-950.properties.
+    ./oc-login.sh [optional] ../bamoe-951.properties.
 ```
 
 > [!IMPORTANT]  

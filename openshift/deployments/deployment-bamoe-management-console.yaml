@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   annotations:
     deployment.kubernetes.io/revision: '2'
-    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"bamoe-management-console:9.3.1-ibm-0006"},"fieldPath":"spec.template.spec.containers[?(@.name==\"bamoe-management-console\")].image"}]'
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"bamoe-management-console:9.5.1-ibm-0002"},"fieldPath":"spec.template.spec.containers[?(@.name==\"bamoe-management-console\")].image"}]'
     openshift.io/generated-by: OpenShiftNewApp
   resourceVersion: '9383349'
   name: bamoe-management-console
@@ -122,12 +122,12 @@ metadata:
           'f:replicas': {}
           'f:updatedReplicas': {}
       subresource: status
-  namespace: bamoe-v931
+  namespace: bamoe-v951
   labels:
     app: bamoe-management-console
     app.kubernetes.io/component: bamoe-management-console
     app.kubernetes.io/instance: bamoe-management-console
-    app.kubernetes.io/part-of: bamoe-v931
+    app.kubernetes.io/part-of: bamoe-v951
     app.openshift.io/runtime: js
 spec:
   replicas: 1

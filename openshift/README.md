@@ -4,11 +4,11 @@ This document includes instructions on how to setup IBM BAMOE on Red Hat OpenShi
 ## Overview
 The following scripts and Openshift YAML configuation files are made available to setup IBM BAMOE on OpenShift.  Please note that the version of OpenShift that this has been tested on is [OpenShift Local](https://developers.redhat.com/products/openshift-local/overview) and there may be differences when setting up on normal OpenShift.  
 
-The `scripts` folder contains a number of shell scrips that are helpful not only in the installation phase, but also during development and deployment.  There are scripts which allow you to login to the OpenShift CLI or Docker, and scripts which drive the installation process.  Each script expects a property file as it's first input parameter, and there is a sample property file in the following folder in the repository at `./openshift/bamoe-931.properties`, so you can either update this file or create your own.  Each script uses the following syntax:
+The `scripts` folder contains a number of shell scrips that are helpful not only in the installation phase, but also during development and deployment.  There are scripts which allow you to login to the OpenShift CLI or Docker, and scripts which drive the installation process.  Each script expects a property file as it's first input parameter, and there is a sample property file in the following folder in the repository at `./openshift/bamoe-951.properties`, so you can either update this file or create your own.  Each script uses the following syntax:
 
 ```shell
 cd ./scripts
-./<script-file>.sh [optional] ../bamoe-931.properties
+./<script-file>.sh [optional] ../bamoe-951.properties
 ```
 
 The following property file is supplied for you, so all you need to do is update some of the OpenShift cluster properties or the version of BAMOE you are installing, which always defaults to the latest version:
@@ -19,14 +19,14 @@ OCP_URL=https://api.crc.testing:6443
 OCP_CONSOLE_URL=https://console-openshift-console.apps-crc.testing
 OCP_USER=kubeadmin
 OCP_PASS=**********
-OCP_DEFAULT_PROJECT=bamoe-v931
+OCP_DEFAULT_PROJECT=bamoe-v951
 
 # IBM BAMOE Properties
-BAMOE_VERSION=9.3.1-ibm-0006
-BAMOE_GROUP=bamoe-v931
-BAMOE_PROJECT=bamoe-v931
-BAMOE_INFRASTRUCTURE_PROJECT=bamoe-v931-infrastructure
-BAMOE_APPS_PROJECT=bamoe-v931-demos
+BAMOE_VERSION=9.5.1-ibm-0002
+BAMOE_GROUP=bamoe-v951
+BAMOE_PROJECT=bamoe-v951
+BAMOE_INFRASTRUCTURE_PROJECT=bamoe-v951-infrastructure
+BAMOE_APPS_PROJECT=bamoe-v951-demos
 
 # IBM BAMOE Maven
 BAMOE_MAVEN_REPOSITORY_IMAGE=quay.io/bamoe/maven-repository:${BAMOE_VERSION}

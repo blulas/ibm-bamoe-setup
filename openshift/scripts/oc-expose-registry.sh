@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-  props=../bamoe-950.properties
+  props=../bamoe-951.properties
 else
   props=$1
 fi
